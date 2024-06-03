@@ -8,12 +8,14 @@ const cors = require('cors')
 const app = express()
 // Configuration de CORS
 
-app.use(cors({
-    credentials: true,
-    preflightContinue: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH' , 'DELETE', 'OPTIONS'],
-    origin: true
-}));
+app.use(cors())
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+  });
 app.use(express.json());
 
 
