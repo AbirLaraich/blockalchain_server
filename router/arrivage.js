@@ -4,49 +4,56 @@ const router = express.Router();
 const fs = require('fs');
 
 module.exports = () => {
-      const arrivageController = new ArrivageController();
+    const arrivageController = new ArrivageController();
 
-      router.post('/ancrage-arrivage', async (req, res) => {
-            await arrivageController.controleurAncrage(req, res);
-      });
+    // Middleware pour autoriser les requêtes CORS
+    router.use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        next();
+    });
 
-      router.post('/write-file', async (req, res) => {
-            try {
-                  const data = req.body.data;
-                  const filename = req.body.filename;
+    router.post('/ancrage-arrivage', async (req, res) => {
+        await arrivageController.controleurAncrage(req, res);
+    });
 
-                  const directory = './';
-                  const filePath = directory + filename;
+    router.post('/write-file', async (req, res) => {
+        try {
+            const data = req.body.data;
+            const filename = req.body.filename;
 
-                  let existingData = [];
+            const directory = './';
+            const filePath = directory + filename;
 
-                  if (fs.existsSync(filePath)) {
-                        const fileContent = fs.readFileSync(filePath, 'utf8');
-                        console.log('File content:', fileContent);
+            let existingData = [];
 
-                        if (fileContent.trim() !== '') {
-                              existingData = JSON.parse(fileContent);
-                        }
-                  }
+            if (fs.existsSync(filePath)) {
+                const fileContent = fs.readFileSync(filePath, 'utf8');
+                console.log('File content:', fileContent);
 
-                  const newData = Array.isArray(data) ? data : [data];
-
-                  existingData.push(...newData);
-                  fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2)); // null, 2 for pretty printing
-
-                  console.log(`Data has been appended successfully to ${filePath}`);
-                  res.send('Data appended successfully');
-            } catch (error) {
-                  console.error('Error appending data:', error);
-                  res.status(500).send('Error appending data');
+                if (fileContent.trim() !== '') {
+                    existingData = JSON.parse(fileContent);
+                }
             }
-      });
 
-      router.get('/data/:numLot', async (req, res) => {
-            const numLot = req.params.numLot;
-            console.log(numLot);
-      });
+            const newData = Array.isArray(data) ? data : [data];
 
+            existingData.push(...newData);
+            fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2)); // null, 2 for pretty printing
 
-      return router;
+            console.log(`Data has been appended successfully to ${filePath}`);
+            res.send('Data appended successfully');
+        } catch (error) {
+            console.error('Error appending data:', error);
+            res.status(500).send('Error appending data');
+        }
+    });
+
+    router.get('/data/:numLot', async (req, res) => {
+        const numLot = req.params.numLot;
+        console.log(numLot);
+    });
+
+    return router;
 };
