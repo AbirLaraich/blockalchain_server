@@ -1,0 +1,477 @@
+Lien hypertexte vers la page du décodeur Ethereum : 
+https://lab.miguelmota.com/ethereum-input-data-decoder/example/
+
+L'ABI du contrat qui est à copier dans le champs ABI du décodeur : 
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor",
+    "signature": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "commandes",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "n_commande",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "date_arrivee",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "date_cloture",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "adresse",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct CertificationCommande.Fournisseur",
+        "name": "provenance_fournisseur",
+        "type": "tuple"
+      },
+      {
+        "internalType": "string",
+        "name": "code_sanitaire",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "distance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "commentaire",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xffd826d3"
+  },
+  {
+    "inputs": [],
+    "name": "taille",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xe8a38d53"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_commande",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_date_arrivee",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_date_cloture",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_id_fournisseur",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_adresse_fournisseur",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_code_sanitaire",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_distance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_code_articles",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_poids_articles",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_commentaire",
+        "type": "string"
+      }
+    ],
+    "name": "ajouterCommande",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf8517b2b"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_commande",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_code_articles",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_poids_articles",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "modifierCommande",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xde775351"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_commande",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_lot",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_article",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_poids_article",
+        "type": "uint256"
+      }
+    ],
+    "name": "ajouterArticle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xccfecaac"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_commande",
+        "type": "string"
+      }
+    ],
+    "name": "commandeExists",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xe6cf743d"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "b",
+        "type": "string"
+      }
+    ],
+    "name": "compareStrings",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function",
+    "constant": true,
+    "signature": "0xbed34bba"
+  },
+  {
+    "inputs": [],
+    "name": "getTaille",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xf11b344e"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_lot",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_article",
+        "type": "string"
+      }
+    ],
+    "name": "articleExists",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0x7e043c4a"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_lot",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_article",
+        "type": "string"
+      }
+    ],
+    "name": "getCommande",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "code_magasin",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "n_commande",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "date_arrivee",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "date_cloture",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "adresse",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct CertificationCommande.Fournisseur",
+            "name": "provenance_fournisseur",
+            "type": "tuple"
+          },
+          {
+            "internalType": "string",
+            "name": "code_sanitaire",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "distance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string[]",
+            "name": "code_articles",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "poids_articles",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "string",
+            "name": "commentaire",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct CertificationCommande.Commande",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0x5b172066"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_lot",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_article",
+        "type": "string"
+      }
+    ],
+    "name": "getPoidsArticle",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0x961522b1"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_code_magasin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_lot",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_n_article",
+        "type": "string"
+      }
+    ],
+    "name": "getArticle",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true,
+    "signature": "0xb7a567d6"
+  }
+]

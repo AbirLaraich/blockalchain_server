@@ -1,0 +1,22 @@
+{
+  "name": "wutrack",
+  "version": "1.0.0",
+  "main": "serverExpress.js",
+  "scripts": {
+    "start": "nodemon serverExpress.js",
+    "test": "node testEnvoi"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "webpack": "^5.88.2"
+  }
+}

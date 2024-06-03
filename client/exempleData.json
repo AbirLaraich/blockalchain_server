@@ -1,0 +1,63 @@
+{
+	"arrivage": {
+		"id": "1",
+		"code_magasin":"25",
+		"numero_de_arrivage": "58946555",
+		"fournisseur":
+			{
+				"nom": "Scopa",
+				"adresse": "Cours St Paul BP36 27110 NEUBOURG"
+			},
+		"distance":50,
+		"producteur": null,
+		"date_livraison": "2023-11-14T23:00:00.000Z",
+		"date_de_cloture": "2023-11-14T23:00:00.000Z"
+	},
+	"commentaire":
+		{
+		"content":"C'est mon commentaire"
+		},
+	"lots": [
+		{
+			"lot": {
+				"lot_id": "1"
+			},
+			"articles": [
+				{
+					"article_id": "1",
+					"article_poids": "10"
+				},
+				{
+					"article_id": "2",
+					"article_poids": "20"
+				}
+			]
+		},
+		{
+			"lot": {
+				"lot_id": "2"
+			},
+			"articles": [
+				{
+					"article_id": "3",
+					"article_poids": "5"
+				},
+				{
+					"article_id": "4",
+					"article_poids": "5"
+				}
+			]
+		},
+		{
+			"lot": {
+				"lot_id": "3"
+			},
+			"articles": [
+				{
+					"article_id": "5",
+					"article_poids": "12,740"
+				}
+			]
+		}
+	]
+}

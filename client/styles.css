@@ -1,0 +1,75 @@
+/* Style général pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebeff1;
+}
+
+/* Style pour les h1 */
+h1 {
+    text-align: center;
+    background-color: rgb(46, 46, 48); 
+    color: #fff; 
+    padding: 15px;
+    /*font-family: "Times New Roman", Times, serif;*/
+    border-radius: 5px;
+    margin: 0 auto; 
+    max-width: 700px;
+}
+
+
+/* Style pour les formulaires */
+form {
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
+}
+
+
+/* Style pour les étiquettes (labels) */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style pour les champs de texte */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style pour les boutons */
+input[type="submit"],
+button {
+    display: block;
+    margin:0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Style pour afficher mes résultats */
+#resultat {
+    /*margin:0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
+}

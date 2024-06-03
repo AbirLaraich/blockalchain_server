@@ -1,0 +1,85 @@
+{
+    "id": "1",
+    "numero_de_arrivage": "58946555",
+    "commentaire": "décloture de l'arrivage pour ajouter un lot",
+    "date_livraison": "2023-11-14T23:00:00.000Z",
+    "date_de_cloture": "2023-11-14T23:00:00.000Z",
+    "fournisseur": {
+      "id": "Scopa",
+      "adresse": "Socopa 27110 NEUBOURG"
+    },
+    "producteur": null,
+    "code_magasin": "11",
+    "distance": 44,
+    "lots": [
+      {
+        "lot": {
+          "id": "1",
+          "numero_lot": "66459459565",
+          "nom_du_produit": "Bavette Aloyau X2",
+          "poids": "20,21",
+          "date_de_cloture": "2023-11-14T23:00:00.000Z"
+        },
+        "articles": [
+          {
+            "id": "1",
+            "numero_article": "5492654642",
+            "nom_du_produit": "Bavette d'aloyau",
+            "poids": "10",
+            "date_creation": "2023-11-14T23:00:00.000Z"
+          },
+          {
+            "id": "2",
+            "numero_article": "675945458",
+            "nom_du_produit": "Bavette d'aloyau",
+            "poids": "10",
+            "date_creation": "2023-11-14T23:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "lot": {
+          "id": "2",
+          "numero_lot": "8470700000",
+          "nom_du_produit": "Onglet Nature",
+          "poids":"11,64",
+          "date_de_cloture": "2023-11-14T23:00:00.000Z"
+        },
+        "articles": [
+          {
+            "id": "3",
+            "numero_article": "6944664555",
+            "nom_du_produit": "Onglet BBQ",
+            "poids": "5",
+            "date_creation": "2023-11-14T23:00:00.000Z"
+          },
+          {
+            "id": "4",
+            "numero_article": "6446549445",
+            "nom_du_produit": "Onglet Mexicaine",
+            "poids": "5",
+            "date_creation": "2023-11-14T23:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "lot": {
+          "id": "3",
+          "numero_lot": "2570530300",
+          "nom_du_produit": "Gorge Dec",
+          "poids": "12,74",
+          "date_de_cloture": "2023-11-14T23:00:00.000Z"
+        },
+        "articles": [
+          {
+            "id": "5",
+            "numero_article": "5865859855",
+            "nom_du_produit": "Gorge Dec",
+            "poids": "12,74",
+            "date_creation": "2023-11-14T23:00:00.000Z"
+          }
+        ]
+      }
+    ]
+  }
+  

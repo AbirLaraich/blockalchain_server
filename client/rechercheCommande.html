@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script><!--importer web3-->
+        <title>Formulaire</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <h1>Recherche des lots </h1>
+        <form id="recherche-form">
+            <table>
+                <tr>
+                    <td><label for="code_magasin">Code du magasin :</label></td>
+                    <td><input type="text" id="code_magasin_r" name="code_magasin" required></td>
+                </tr>
+                <tr>
+                    <td><label for="code_lot">N° de lot:</label></td>
+                    <td><input type="text" id="code_lot_r" name="n_lot" required></td>
+                </tr>
+                <tr>
+                    <td><label for="code_article">Code de l'article:</label></td>
+                    <td><input type="text" id="code_article_r" name="code_article" required></td>
+                </tr>
+            </table>
+        <br>
+        <button type="submit">Rechercher</button>
+        </form>
+        <div id='result'>
+            <!-- Les résultats de la recherche seront affichés ici -->
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+        <!--<script src="1_moncontrat.js" type="module"></script>-->
+        <script src="interrogation.js" type="module"></script>
+    </body>
+</html>
